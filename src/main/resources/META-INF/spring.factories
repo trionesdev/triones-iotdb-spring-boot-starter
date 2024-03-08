@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.moensun.iotdb.autoconfigure.IotDbAutoConfiguration
+com.trionesdev.iotdb.autoconfigure.IotDbAutoConfiguration

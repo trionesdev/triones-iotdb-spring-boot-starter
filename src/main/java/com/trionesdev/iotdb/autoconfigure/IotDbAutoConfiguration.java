@@ -1,4 +1,4 @@
-package com.moensun.iotdb.autoconfigure;
+package com.trionesdev.iotdb.autoconfigure;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

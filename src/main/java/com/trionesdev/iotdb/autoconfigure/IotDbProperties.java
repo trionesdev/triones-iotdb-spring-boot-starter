@@ -1,4 +1,4 @@
-package com.moensun.iotdb.autoconfigure;
+package com.trionesdev.iotdb.autoconfigure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
