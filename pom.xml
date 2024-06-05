@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.trionesdev.iotdb</groupId>
-  <artifactId>iotdb-spring-boot-starter</artifactId>
+  <artifactId>triones-iotdb-spring-boot-starter</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <name>MS:IotDb:Starter</name>
 
@@ -73,6 +73,7 @@
       <id>moensun</id>
       <url>https://nexus.moensun.com/repository/maven-releases/</url>
     </repository>
+
   </distributionManagement>
 
   <build>
