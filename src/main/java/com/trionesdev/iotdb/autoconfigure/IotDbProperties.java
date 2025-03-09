@@ -16,6 +16,7 @@ public class IotDbProperties {
     private String user;
     private String password;
     private String database;
+    private long ttl;
 
     public enum Dialect {
         TREE,
