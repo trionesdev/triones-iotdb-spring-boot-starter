@@ -37,7 +37,7 @@ public class IotDbAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = "spring.iotdb", name = "dialect", havingValue = "tree")
+    @ConditionalOnProperty(prefix = "spring.iotdb", name = "treeDialect", havingValue = "tree")
     @ConditionalOnMissingBean(SessionPool.class)
     public SessionPool sessionPool() {
         return new SessionPool.Builder()
@@ -49,7 +49,7 @@ public class IotDbAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = "spring.iotdb", name = {"dialect"}, havingValue = "table")
+    @ConditionalOnProperty(prefix = "spring.iotdb", name = {"tableDialect"}, havingValue = "true")
     @ConditionalOnMissingBean(ITableSessionPool.class)
     public ITableSessionPool tableSessionPool() {
         return new TableSessionPoolBuilder()

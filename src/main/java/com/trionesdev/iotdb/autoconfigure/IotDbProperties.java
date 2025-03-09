@@ -8,7 +8,8 @@ import java.util.List;
 @Data
 @ConfigurationProperties(prefix = "spring.iotdb")
 public class IotDbProperties {
-    private Dialect dialect;
+    private Boolean treeDialect;
+    private Boolean tableDialect;
     private int maxSize = 10;
     private String host;
     private int port;
@@ -17,9 +18,4 @@ public class IotDbProperties {
     private String password;
     private String database;
     private long ttl;
-
-    public enum Dialect {
-        TREE,
-        TABLE
-    }
 }
