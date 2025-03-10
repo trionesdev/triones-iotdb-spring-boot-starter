@@ -3,7 +3,6 @@ package com.trionesdev.iotdb.autoconfigure;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.iotdb.isession.pool.ITableSessionPool;
 import org.apache.iotdb.session.pool.SessionPool;
 import org.apache.iotdb.session.pool.TableSessionPoolBuilder;
@@ -12,7 +11,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +35,7 @@ public class IotDbAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = "spring.iotdb", name = "treeDialect", havingValue = "tree")
+    @ConditionalOnProperty(prefix = "spring.iotdb", name = {"tree-dialect"}, havingValue = "true")
     @ConditionalOnMissingBean(SessionPool.class)
     public SessionPool sessionPool() {
         return new SessionPool.Builder()
@@ -49,7 +47,7 @@ public class IotDbAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = "spring.iotdb", name = {"tableDialect"}, havingValue = "true")
+    @ConditionalOnProperty(prefix = "spring.iotdb", name = {"table-dialect"}, havingValue = "true")
     @ConditionalOnMissingBean(ITableSessionPool.class)
     public ITableSessionPool tableSessionPool() {
         return new TableSessionPoolBuilder()
